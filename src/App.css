@@ -1,0 +1,150 @@
+
+/* MAIN APPLICATION */
+
+.app {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.app h1 {
+  margin: 0 0 30px;
+  text-align: center;
+  color: #101367;
+  font-size: 32px;
+}
+
+/* WEATHER SECTION */
+
+.weather-section h2 {
+  margin-bottom: 22px;
+  font-size: 21px;
+  color: #334155;
+}
+
+/* CITY SEARCH */
+
+.search-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.search-box label {
+  grid-column: 1 / -1;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.search-box input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #243447;
+}
+
+.search-box input:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.search-box button {
+  padding: 13px 24px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #1d4ed8;
+}
+
+.search-box button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* WEATHER RESULTS */
+
+.weather-result {
+  padding: 24px;
+  background: #eff6ff;
+  border-radius: 12px;
+}
+
+.weather-result h3 {
+  margin: 0 0 16px;
+  font-size: 25px;
+  color: #1e40af;
+}
+
+.weather-result p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* CITY IMAGE */
+
+.city-image {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 18px 0;
+}
+
+.image-message {
+  color: #64748b;
+  font-style: italic;
+}
+
+/* ERROR MESSAGE */
+
+.error-message {
+  padding: 14px;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+/* MOBILE DEVICES */
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .app {
+    padding: 22px;
+  }
+
+  .app h1 {
+    font-size: 27px;
+  }
+
+  .search-box {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .weather-result {
+    padding: 18px;
+  }
+}
