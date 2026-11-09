@@ -3,7 +3,7 @@
 
 .app {
   width: 100%;
-  max-width: 620px;
+  max-width: 650px;
   margin: 0 auto;
   padding: 35px;
   background: #ffffff;
@@ -14,16 +14,13 @@
 .app h1 {
   margin: 0 0 30px;
   text-align: center;
-  color: #101367;
+  color: #2563eb;
   font-size: 32px;
 }
 
-/* WEATHER SECTION */
-
-.weather-section h2 {
-  margin-bottom: 22px;
-  font-size: 21px;
+h2 {
   color: #334155;
+  font-size: 21px;
 }
 
 /* CITY SEARCH */
@@ -59,7 +56,7 @@
 .search-box button {
   padding: 13px 24px;
   background: #2563eb;
-  color: #ffffff;
+  color: white;
   border: none;
   border-radius: 8px;
   font-weight: bold;
@@ -75,7 +72,7 @@
   cursor: not-allowed;
 }
 
-/* WEATHER RESULTS */
+/* WEATHER RESULT */
 
 .weather-result {
   padding: 24px;
@@ -111,7 +108,7 @@
   font-style: italic;
 }
 
-/* ERROR MESSAGE */
+/* ERROR AND LOADING */
 
 .error-message {
   padding: 14px;
@@ -121,7 +118,107 @@
   line-height: 1.5;
 }
 
-/* MOBILE DEVICES */
+.loading-message {
+  color: #64748b;
+  font-style: italic;
+}
+
+/* AUTOMATIC WEATHER UPDATE */
+
+.update-info {
+  margin-top: 22px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #dbeafe;
+}
+
+.update-info p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* SEARCH HISTORY */
+
+.history-section {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.history-header h2 {
+  margin: 0;
+}
+
+.history-count {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.empty-history {
+  color: #64748b;
+  font-style: italic;
+}
+
+/* HISTORY TABLE */
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.history-table th {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.history-table img {
+  display: block;
+  width: 85px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.no-image {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* CLEAR HISTORY BUTTON */
+
+.clear-history-button {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.clear-history-button:hover {
+  background: #dc2626;
+}
+
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 480px) {
   body {
@@ -146,5 +243,10 @@
 
   .weather-result {
     padding: 18px;
+  }
+
+  .history-table img {
+    width: 65px;
+    height: 45px;
   }
 }
