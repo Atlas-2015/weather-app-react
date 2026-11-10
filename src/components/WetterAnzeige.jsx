@@ -63,13 +63,44 @@ export default function WetterAnzeige({
             )
           )}
 
-          <p>
-            <strong>Temperature:</strong> {weather.temperature} °C
-          </p>
+          {/* Modern Weather Temperature Card */}
+<div
+  className="
+    my-5
+    rounded-2xl
+    bg-white
+    p-5
+    shadow-md
+    ring-1 ring-sky-100
+    transition-all duration-300
+    hover:-translate-y-1
+    hover:shadow-xl
+    dark:bg-slate-700
+    dark:ring-slate-600
+  "
+>
+  <div className="flex items-center justify-between gap-4">
 
-          <p>
-            <strong>Weather:</strong> {weather.description}
-          </p>
+    <div>
+      <div className="text-sm font-medium text-slate-500 dark:text-slate-300">
+        Current Temperature
+      </div>
+
+      <div className="mt-2 text-5xl font-extrabold text-sky-700 dark:text-sky-200">
+        {weather.temperature}°C
+      </div>
+
+      <div className="mt-2 text-sm text-slate-600 dark:text-slate-200">
+        {weather.description}
+      </div>
+    </div>
+
+    <span className="text-5xl" aria-hidden="true">
+      🌡️
+    </span>
+
+  </div>
+</div>
 
           {/* Automatic update information */}
           <div className="update-info">

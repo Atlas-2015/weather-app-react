@@ -250,3 +250,87 @@ h2 {
     height: 45px;
   }
 }
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+/* Dark background */
+body:has(.app.dark) {
+  background: #020617;
+}
+
+/* Main application */
+.app.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Headings */
+.app.dark h1,
+.app.dark h2 {
+  color: #f8fafc;
+}
+
+/* Search input */
+.app.dark .search-box input {
+  background: #1e293b;
+  color: #ffffff;
+  border-color: #475569;
+}
+
+.app.dark .search-box label {
+  color: #e2e8f0;
+}
+
+/* Weather result */
+.app.dark .weather-result {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.app.dark .weather-result h3 {
+  color: #93c5fd;
+}
+
+/* Update information */
+.app.dark .update-info {
+  background: #334155;
+  border-color: #475569;
+}
+
+.app.dark .update-info p {
+  color: #e2e8f0;
+}
+
+/* Search history */
+.app.dark .history-section {
+  border-color: #475569;
+}
+
+.app.dark .history-count,
+.app.dark .empty-history,
+.app.dark .no-image {
+  color: #cbd5e1;
+}
+
+.app.dark .history-table th {
+  background: #334155;
+  color: #ffffff;
+}
+
+.app.dark .history-table td {
+  border-color: #475569;
+}
+
+/* Smooth color transitions */
+body,
+.app,
+.weather-result,
+.update-info,
+.search-box input {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
